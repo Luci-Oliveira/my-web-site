@@ -42,3 +42,10 @@ dots.forEach((dot, index) => {
         updateCarousel();
     });
 });
+
+const upIcon = document.getElementById("upIcon");
+upIcon.addEventListener("click", zap);
+
+function zap () {
+    window.location.href = "https://wa.me/5511954959623";
+}

@@ -140,16 +140,16 @@ header .container nav ul li a:hover {
     cursor: pointer;
     border-radius: 4px;
     transition: 0.5s;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: var(--pure);
+    font-family: var(--primary-font);
 }
 
 .call .btn-call:hover {
     background-color: var(--primary-hover);
-}
-
-.call .btn-call p {
-    font-size: 26px;
-    font-weight: bold;
-    letter-spacing: 1px;
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
@@ -408,6 +408,45 @@ header .container nav ul li a:hover {
     line-height: 1.6;
 }
 
+.products-more{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    margin-top:50px;
+}
+
+.products-btn{
+    width:280px;
+    height:70px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:var(--primary);
+    color:var(--pure);
+    text-decoration:none;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-family:var(--text-font);
+    font-weight:bold;
+    border-radius:6px;
+    transition:.4s;
+    text-align: center;
+}
+
+.products-btn:hover{
+    background:var(--primary-hover);
+    transform:translateY(-3px);
+    box-shadow:0 12px 30px rgba(0,0,0,.15);
+}
+
+.products-info{
+    margin-top:35px;
+    text-align:center;
+    color:var(--text);
+    font-family:var(--text-font);
+    font-size:16px;
+}
+
 .price {
     display: block;
     margin-top: 18px;
@@ -623,7 +662,8 @@ header .container nav ul li a:hover {
     display: flex;
     align-items: center;
     gap: 18px;
-    padding: 18px 0;
+    /* padding: 18px 0; */
+    padding: 26px 0;
     border-bottom: 1px solid #e3d8cf;
 }
 
@@ -846,6 +886,255 @@ header .container nav ul li a:hover {
     cursor: pointer;
 }
 
+/* CATALOG PAGE */
+
+.catalog-header {
+    width: 100%;
+    background-color: var(--bg);
+    padding: 24px 20px;
+    border-bottom: 1px solid #eadfd7;
+}
+
+.catalog-header .container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.catalog-logo {
+    color: var(--title);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.catalog-header nav {
+    display: flex;
+    gap: 32px;
+}
+
+.catalog-header nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-family: var(--text-font);
+    font-size: 15px;
+    text-transform: uppercase;
+    transition: .4s;
+}
+
+.catalog-header nav a:hover {
+    color: var(--primary);
+}
+
+.catalog {
+    width: 100%;
+    background-color: var(--bg-light);
+    padding: 60px 20px;
+}
+
+.catalog .container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: var(--bg);
+    padding: 55px 40px;
+}
+
+.catalog-title {
+    max-width: 760px;
+    margin: 0 auto 55px auto;
+    text-align: center;
+}
+
+.catalog-title > span {
+    color: var(--primary);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+.catalog-arrow {
+    width: 160px;
+    height: 30px;
+    background-image: url('./img/arrow.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 20px auto;
+}
+
+.catalog-title h1 {
+    color: var(--title);
+    text-transform: uppercase;
+    font-size: clamp(45px, 5vw, 70px);
+    line-height: .95;
+}
+
+.catalog-title h1 span {
+    color: var(--primary);
+    font-family: var(--secondary-font);
+    text-transform: none;
+    font-size: 1.15em;
+}
+
+.catalog-title p {
+    margin-top: 28px;
+    color: var(--text);
+    font-family: var(--text-font);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 26px;
+}
+
+.catalog-card {
+    background-color: var(--pure);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .4s;
+}
+
+.catalog-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 35px rgba(90, 70, 62, .14);
+}
+
+.catalog-img {
+    width: 100%;
+    height: 280px;
+    background-color: var(--bg-light);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 28px;
+}
+
+.catalog-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 12px 18px rgba(0,0,0,.12));
+}
+
+.catalog-content {
+    padding: 24px;
+}
+
+.catalog-content h3 {
+    color: var(--title);
+    text-transform: uppercase;
+    font-size: 26px;
+    line-height: 1;
+    text-align: center;
+}
+
+.catalog-info {
+    margin-top: 22px;
+    display: flex;
+    gap: 12px;
+}
+
+.catalog-info div {
+    width: 50%;
+    background-color: var(--bg);
+    border-radius: 8px;
+    padding: 14px 10px;
+    text-align: center;
+}
+
+.catalog-info span {
+    display: block;
+    color: var(--primary);
+    font-family: var(--text-font);
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.catalog-info p {
+    color: var(--text);
+    font-family: var(--text-font);
+    font-size: 14px;
+}
+
+.catalog-contact {
+    margin-top: 70px;
+    padding: 45px 30px;
+    background-color: var(--bg-light);
+    text-align: center;
+    border-radius: 10px;
+}
+
+.catalog-contact h2 {
+    color: var(--title);
+    text-transform: uppercase;
+    font-size: clamp(34px, 4vw, 54px);
+    line-height: 1;
+}
+
+.catalog-contact p {
+    max-width: 680px;
+    margin: 20px auto 0 auto;
+    color: var(--text);
+    font-family: var(--text-font);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.catalog-btn {
+    width: 310px;
+    height: 68px;
+
+    margin: 32px auto 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--primary);
+    color: var(--pure);
+
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: var(--text-font);
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+
+    border-radius: 6px;
+    transition: .4s;
+}
+
+.catalog-btn:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(90, 70, 62, .18);
+}
+
+/* RESPONSIVO */
+@media screen and (max-width: 1180px) {
+    .catalog-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .catalog-img {
+        height: 260px;
+    }
+}
+
 /* NOTBOOK */
 
 @media screen and (max-width: 1024px) {
@@ -1036,6 +1325,37 @@ header .container nav ul li a:hover {
 
     .footer-brand h2 {
         font-size: 34px;
+    }
+
+    .catalog-header .container {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .catalog-header nav {
+        gap: 22px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .catalog .container {
+        padding: 45px 28px;
+    }
+
+    .catalog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .catalog-img {
+        height: 250px;
+    }
+
+    .catalog-info {
+        flex-direction: column;
+    }
+
+    .catalog-info div {
+        width: 100%;
     }
 }
 
@@ -1288,5 +1608,71 @@ header .container nav ul li a:hover {
 
     .footer-bottom p {
         font-size: 12px;
+    }
+
+    .products-btn{
+        width:220px;
+        height:60px;
+        font-size:14px;
+    }
+
+    .catalog {
+        padding: 35px 14px;
+    }
+
+    .catalog .container {
+        padding: 38px 20px;
+    }
+
+    .catalog-logo {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .catalog-header nav a {
+        font-size: 13px;
+    }
+
+    .catalog-title > span {
+        font-size: 16px;
+    }
+
+    .catalog-arrow {
+        width: 55%;
+    }
+
+    .catalog-title h1 {
+        font-size: 42px;
+    }
+
+    .catalog-title p {
+        font-size: 14px;
+    }
+
+    .catalog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .catalog-img {
+        height: 310px;
+    }
+
+    .catalog-content h3 {
+        font-size: 25px;
+    }
+
+    .catalog-contact {
+        padding: 38px 20px;
+    }
+
+    .catalog-contact p {
+        font-size: 14px;
+    }
+
+    .catalog-btn {
+        width: 100%;
+        max-width: 280px;
+        height: 62px;
+        font-size: 13px;
     }
 }
